@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+*::selection {
+  background: #f7e018;
+  color: #000;
+  font-weight: bold;
+}
+.seccion {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+.seccion h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.fondo {
+  background: #f7e018;
+}
+.active {
+  font-weight: bold;
+  text-decoration: underline;
+}
+.destacado {
+  font-weight: bold;
+  text-decoration: underline;
+  text-transform: uppercase;
+  color: #ceba0a;
+}
+.desuso {
+  color: #ff0000;
+  font-weight: bold;
+}
+.nav-link {
+  color: #000;
+  font-weight: bold;
+}
+.nav-link:hover {
+  text-decoration: underline;
+  transition: text-decoration 0.3s ease-in;
+}
+.nav-link:not(:hover) {
+  transition: text-decoration 0.3s ease-out;
+}
+#que-es ul li {
+  list-style: circle;
+}
+#elementos li ul li {
+  list-style: none;
+}
+pre,
+.card {
+  box-shadow: 0 0 15px #ddd;
+  background: rgb(209, 202, 202);
+  font-size: 16px;
+  overflow: hidden;
+}
+.boton:hover {
+  box-shadow: 0 0 15px #b3a20a;
+  transition: box-shadow 0.3s ease-in;
+}
+.boton:not(:hover) {
+  transition: box-shadow 0.3 ease-out;
+}

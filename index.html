@@ -1,0 +1,289 @@
+    <!DOCTYPE html>
+    <html lang="es">
+      <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- IMPORTAR CSS BOOTSTRAP -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+        />
+        <!-- IMPORTAR ICONOS FONTAWSOME -->
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+          integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+          crossorigin="anonymous"
+        />
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" type="image/x-icon" />
+        <title>JavaScript Explicado</title>
+      </head>
+      <body>
+        <nav class="navbar navbar-expand-lg navbar-light fondo sticky-top">
+          <div class="container-fluid">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png" alt="logo" height="40" width="40" />
+            <a class="navbar-brand" href="#que-es">Explicado</a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#que-es"
+                    ><i class="fas fa-question"></i> Que es</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#elementos"
+                    ><i class="fas fa-code"></i> Elementos</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#buenas-practicas"
+                    ><i class="fab fa-dev"></i> Buenas prácticas</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#frameworks"
+                    ><i class="fab fa-react"></i> Frameworks</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div id="que-es" class="seccion">
+          <h1>¿Que es?</h1>
+          <p>
+            JavaScript es un lenguaje de programación que se utiliza en la creación
+            de páginas web interactivas. Es un lenguaje interpretado y de tipado
+            dinámico que se ejecuta en el navegador web de un usuario.
+          </p>
+          <h2>¿Como se utiliza?</h2>
+          <ul>
+            <li>
+              <p>Integrado en el documento HTML</p>
+              <pre>
+                  <code>
+                      &lt;script&gt;
+                      // Código JavaScript
+                      &lt;/script&gt;
+                  </code>
+              </pre>
+            </li>
+            <li>
+              <p>
+                En un archivo externo con extensión
+                <code>.js</code>
+              </p>
+              <pre>
+                    <code>
+                        &lt;script src="script.js"&gt;&lt;/script&gt;
+                    </code>
+                </pre>
+            </li>
+          </ul>
+          <a href="#que-es" class="btn btn-sm fondo boton"><i class="fas fa-caret-up"></i> Volver arriba</a>
+        </div>
+        <div id="elementos" class="seccion">
+          <h1>¿Cuales son sus elementos básicos?</h1>
+          <p>Los elementos que se utilizan en JavaScript son</p>
+          <ul>
+            <li>
+              Para <span class="destacado">seleccionar</span> un elemento en el DOM
+              <ul>
+                <li>
+                  <pre>
+                        <code>
+                            document.getElementById("id");
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                  <pre>
+                        <code>
+                            document.getElementsByClassName("class");
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                  <pre>
+                        <code>
+                            document.getElementsByTagName("tag");
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                  <pre>
+                    <code>
+                        document.querySelector("selector");
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                  <pre>
+                        <code>
+                            document.querySelectorAll("selector"); // Selecciona todos los elementos que cumplan con el selector
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+            </li>
+            <li>
+                Para <span class="destacado">capturar</span> eventos en el DOM
+                <ul>
+                <li>
+                    <pre>
+                        <code>
+                            document.addEventListener("evento", function(){
+                                // Código
+                            });
+                        </code>
+                    </pre>
+                </li>
+                </ul>
+                <li>
+                    Para <span class="destacado">modificar</span> el DOM
+                    <ul>
+                    <li>
+                        <pre>
+                            <code>
+                                document.getElementById("id").innerHTML = "Texto";
+                            </code>
+                        </pre>
+                    </li>
+                    <li>
+                        <pre>
+                            <code>
+                                document.getElementById("id").style.cssProperty = "valor";
+                            </code>
+                        </pre>
+                    </li>
+                    </ul>
+                </li>
+                    Para <span class="destacado">crear</span> variables
+                    <ul>
+                    <li>
+                        <pre>
+                            <code>
+                                var variable = "valor"; <span class="desuso">Ya no se utiliza</span>
+                            </code>
+                        </pre>
+                </li>
+                <li>
+                    <pre>
+                        <code>
+                            let variable = "valor";
+                        </code>
+                    </pre>
+            </li>
+            <li>
+                <pre>
+                    <code>
+                        const constante = "valor";
+                    </code>
+                </pre>
+          </li>
+            </ul>
+          <a href="#que-es" class="btn btn-sm fondo boton"><i class="fas fa-caret-up"></i> Volver arriba</a>
+          <a href="https://www.w3schools.com/js/default.asp" target="blank" class="btn btn-sm fondo boton"><i class="fab fa-js"></i> Ver guia completa</a>
+        </div>
+        <div id="buenas-practicas" class="seccion">
+            <h1>Buenas prácticas en JavaScript</h1>
+            <p>Una buena práctica es la mejor forma de realizar algo en algún lenguaje de programación</p>
+            <ul>
+                <li>
+                    <pre>
+                        <code>
+                        Llama a las cosas por su nombre — nombres de variables y funciones fáciles, cortos y legibles
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <pre>
+                        <code>
+                            Evita el uso de variables globales
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <pre>
+                        <code>
+                        Comenta tanto como necesites, pero no más
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <pre>
+                        <code>
+                            Modulariza — una función por tarea
+                        </code>
+                    </pre>
+                </li>
+                <li>
+                    <pre>
+                        <code>
+                        Utiliza constantes para evitar errores de tipado
+                        </code>
+                    </pre>
+                </li>
+            </ul>
+          <a href="#que-es" class="btn btn-sm fondo boton"><i class="fas fa-caret-up"></i> Volver arriba</a>
+        </div>
+        <div id="frameworks" class="seccion">
+            <h1>Frameworks</h1>
+            <p>En programación, un framework consiste en un marco de software utilizado por los desarrolladores de software para implementar la estructura estándar del software de aplicación.</p>
+          <a href="#que-es" class="btn btn-sm fondo boton"><i class="fas fa-caret-up"></i> Volver arriba</a>
+
+          <!-- Pongo el botón arriba porque si lo pongo abajo lo tapa el footer-->
+
+            <div class="card-group">
+      <div class="card">
+        <img src="https://coder.clothing/images/stories/virtuemart/product/react-logo.png" class="card-img-top" alt="react-logo" height="250" width="auto">
+        <div class="card-body">
+          <h5 class="card-title text-center">React</h5>
+          <p class="card-text">React es un framework de JavaScript de front-end de código abierto y gratuito para crear interfaces de usuario basadas en componentes de UI. Es mantenido por Meta y una comunidad de desarrolladores y empresas individuales. React se puede utilizar como base en el desarrollo de aplicaciones móviles o de una sola página. Sin embargo, React solo se ocupa de la administración del estado y la representación de ese estado en el DOM, por lo que la creación de aplicaciones React generalmente requiere el uso de bibliotecas adicionales para el enrutamiento, así como ciertas funciones del lado del cliente. </p>
+          <a class="btn fondo text-center" href="https://es.reactjs.org/" target="blank">Visitar web</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" class="card-img-top" alt="vue-logo" height="250" width="auto">
+        <div class="card-body">
+          <h5 class="card-title text-center">Vue</h5>
+          <p class="card-text">Vue.js presenta una arquitectura incrementalmente adaptable que se enfoca en la representación declarativa y la composición de componentes. El framework principal se centra solo en la capa de vista. Las funciones avanzadas requeridas para aplicaciones complejas como enrutamiento, administración de estado y herramientas de compilación se ofrecen a través de bibliotecas y paquetes de soporte mantenidos oficialmente.Vue.js permite extender HTML con atributos HTML llamados directivas. Las directivas ofrecen funcionalidad a las aplicaciones HTML y vienen como directivas integradas o definidas por el usuario.</p>
+          <a class="btn fondo text-center" href="https://vuejs.org/" target="blank">Visitar web</a>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Angular_full_color_logo.svg/1920px-Angular_full_color_logo.svg.png" class="card-img-top" alt="angular-logo" height="250" width="auto">
+        <div class="card-body">
+          <h5 class="card-title text-center">Angular</h5>
+          <p class="card-text">Angular es un marco de aplicación web de código abierto y gratuito basado en TypeScript dirigido por el equipo de Angular en Google y por una comunidad de individuos y corporaciones. Angular es una reescritura completa del mismo equipo que construyó AngularJS.Angular se utiliza como la interfaz de la pila MEAN, que consta de la base de datos MongoDB, el marco del servidor de aplicaciones web Express.js, el propio Angular y el entorno de tiempo de ejecución del servidor Node.js.</p>
+          <a class="btn fondo text-center" href="https://angularjs.org/" target="blank">Visitar web</a>
+        </div>
+      </div>
+    </div>
+        </div>
+        <footer class="fondo fixed-bottom text-center">
+            <p>Hecho con ❤️ por Gabriel Vargas Reyes</p>
+        </footer>
+        <!-- IMPORTAR JS BOOTSTRAP -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+          crossorigin="anonymous"
+        ></script>
+      </body>
+    </html>
